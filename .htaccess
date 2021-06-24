@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule "mvc/admin/manage.html-5-page=1" "view/guiadmin/manage.php"
+RewriteRule "mvc/admin/manage.html-(.)-page=1" "view/guiadmin/manage.php?row=$1"
+RewriteRule "mvc/admin/manage.html-(.*)-page=(.*)" "view/guiadmin/manage.php?row=$1&page=$2"
+RewriteRule "mvc/admin/add" "view/guiadmin/add_new.php"
+RewriteRule "mvc/admin/edit-id=(.*)" "view/guiadmin/edit_new.php?id=$1"
+RewriteRule "mvc/show.html-id=(.*)" "view/guiuser/show.php?id=$1"
+RewriteRule "mvc/user/listnews.html-5-page=1" "view/guiuser/user.php"
+RewriteRule "mvc/user/listnews.html-(.*)-page=1" "view/guiuser/user.php?row=$1"
+RewriteRule "mvc/user/listnews.html-(.*)-page=(.*)" "view/guiuser/user.php?row=$1&page=$2"
